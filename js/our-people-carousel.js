@@ -43,10 +43,13 @@
       }
     }
 
-    const accordionHeaders =
-      slideContainer.querySelectorAll(".accordion-header");
+    const accordionHeaders = slideContainer.querySelectorAll(".accordion-header");
+    console.log('accordionHeaders', accordionHeaders)
+
     accordionHeaders.forEach((header) => {
       header.addEventListener("click", () => {
+        const plusEl = header.querySelector('.plus');
+        plusEl?.classList.toggle('active');
         const content = header.nextElementSibling;
         content.style.display =
           content.style.display === "none" ? "block" : "none";
