@@ -1,4 +1,8 @@
 (function () {
+    const changing = document.querySelector(".plus");
+    changing.addEventListener("click", function (e) {
+        changing.classList.toggle("active");
+    });
     /* const changing = document.querySelector(".plus");
     changing.addEventListener("click", function (e) {
         changing.classList.toggle("active");

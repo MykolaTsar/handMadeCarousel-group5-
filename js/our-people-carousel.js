@@ -1,10 +1,11 @@
 (function () {
   const slides = [
     '<div class="our-people__carousel-wrapper"><div class="our__people__carousel-picture"><img class="our__people__carousel-picture-img" src="media/our-people1.jpg" alt="user foto"><div class="our-people__carousel-picture-background"></div></div><div class="accordion-section"><div class="our-people__corousel-text-block accordion-header">Lorry, CEO<div class="plus"></div></div><div class="accordion-content"><p class="accordion-text">I joined the organization as part of the acquisition of Springleaf Financial in 2015. It has been both the most challenging and rewarding roles in my career. The IT organization is made up of some really smart, savvy people</p></div></div></div>',
-    '<div class="our-people__carousel-wrapper"><div class="our__people__carousel-picture"><img class="our__people__carousel-picture-img" src="media/our-people2.jpg" alt="user foto"><div class="our-people__carousel-picture-background"></div></div><div class="accordion-section"><div class="our-people__corousel-text-block accordion-header">Lorry, CEO</div><div class="accordion-content"><p class="accordion-text">I joined the organization as part of the acquisition of Springleaf Financial in 2015. It has been both the most challenging and rewarding roles in my career. The IT organization is made up of some really smart, savvy people</p></div></div></div>',
-    '<div class="our-people__carousel-wrapper"><div class="our__people__carousel-picture"><img class="our__people__carousel-picture-img" src="media/our-people3.jpg" alt="user foto"><div class="our-people__carousel-picture-background"></div></div><div class="accordion-section"><div class="our-people__corousel-text-block accordion-header">Lorry, CEO</div><div class="accordion-content"><p class="accordion-text">I joined the organization as part of the acquisition of Springleaf Financial in 2015. It has been both the most challenging and rewarding roles in my career. The IT organization is made up of some really smart, savvy people</p></div></div></div>',
-    '<div class="our-people__carousel-wrapper"><div class="our__people__carousel-picture"><img class="our__people__carousel-picture-img" src="media/our-people4.jpg" alt="user foto"><div class="our-people__carousel-picture-background"></div></div><div class="accordion-section"><div class="our-people__corousel-text-block accordion-header">Lorry, CEO</div><div class="accordion-content"><p class="accordion-text">I joined the organization as part of the acquisition of Springleaf Financial in 2015. It has been both the most challenging and rewarding roles in my career. The IT organization is made up of some really smart, savvy people</p></div></div></div>',
+    '<div class="our-people__carousel-wrapper"><div class="our__people__carousel-picture"><img class="our__people__carousel-picture-img" src="media/our-people2.jpg" alt="user foto"><div class="our-people__carousel-picture-background"></div></div><div class="accordion-section"><div class="our-people__corousel-text-block accordion-header">Lorry, CEO<div class="plus"></div></div><div class="accordion-content"><p class="accordion-text">I joined the organization as part of the acquisition of Springleaf Financial in 2015. It has been both the most challenging and rewarding roles in my career. The IT organization is made up of some really smart, savvy people</p></div></div></div>',
+    '<div class="our-people__carousel-wrapper"><div class="our__people__carousel-picture"><img class="our__people__carousel-picture-img" src="media/our-people3.jpg" alt="user foto"><div class="our-people__carousel-picture-background"></div></div><div class="accordion-section"><div class="our-people__corousel-text-block accordion-header">Lorry, CEO<div class="plus"></div></div><div class="accordion-content"><p class="accordion-text">I joined the organization as part of the acquisition of Springleaf Financial in 2015. It has been both the most challenging and rewarding roles in my career. The IT organization is made up of some really smart, savvy people</p></div></div></div>',
+    '<div class="our-people__carousel-wrapper"><div class="our__people__carousel-picture"><img class="our__people__carousel-picture-img" src="media/our-people4.jpg" alt="user foto"><div class="our-people__carousel-picture-background"></div></div><div class="accordion-section"><div class="our-people__corousel-text-block accordion-header">Lorry, CEO<div class="plus"></div></div><div class="accordion-content"><p class="accordion-text">I joined the organization as part of the acquisition of Springleaf Financial in 2015. It has been both the most challenging and rewarding roles in my career. The IT organization is made up of some really smart, savvy people</p></div></div></div>',
   ];
+
   let currentSlideIndx = 0;
   const accordionHeaders = document.querySelectorAll(".accordion-header");
   accordionHeaders.forEach((header) => {
@@ -12,7 +13,7 @@
       const content = header.nextElementSibling;
       content.style.display =
         content.style.display === "none" ? "block" : "none";
-        header.classList.toggle("active");
+        // header.classList.toggle("active");
     });
   });
   
@@ -76,10 +77,6 @@
   const prevBtn = document.querySelector(".our-people__carousel-prev");
   prevBtn.addEventListener("click", prevSlide);
   
-  const changing = document.querySelector(".plus");
-    changing.addEventListener("click", function (e) {
-        changing.classList.toggle("active");
-    });
 
   window.addEventListener("resize", renderSlide);
 
