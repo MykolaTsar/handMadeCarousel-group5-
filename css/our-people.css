@@ -1,0 +1,114 @@
+.our-people {
+  padding: 90px 24px 75px 24px;
+  padding-bottom: 75px;
+}
+.our-people__text {
+  color: var(--footer-accent-text-color);
+  font-size: 20px;
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+}
+.our-people__header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 152px;
+}
+.our-people__carousel-wrapper {
+  display: grid;
+  align-items: center;
+  min-height: 300px;
+  padding: 0 20px;
+}
+.our__people__carousel-picture {
+  display: block;
+  border-radius: 11px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+.our__people__carousel-picture-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.our-people__carousel-picture-background {
+  background: rgba(0, 95, 183, 0.34);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+.our-people__corousel-text-block {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  position: relative;
+  color: var(--subtitle-color);
+  font-size: 20px;
+  font-family: "Varela Round", sans-serif;
+  padding: 20px 0;
+  width: 242px;
+}
+.our-people__corousel-text-block::after {
+  content: "+";
+  font-size: 37px;
+  font-weight: 300;
+  position: absolute;
+  right: 1px;
+}
+.our-people__carousel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+.our-people__carousel-js {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+.our-people__carousel-container {
+  display: flex;
+}
+.our-people__carousel-prev,
+.our-people__carousel-next {
+  border: none;
+  font-weight: 900;
+  font-size: x-large;
+}
+@media (min-width: 320px) {
+  .about-us__carousel {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+  }
+}
+@media(min-width:768px) {
+  .our-people__carousel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      justify-items: center;
+      align-items: center;
+  }
+}
+@media(min-width:991px) {
+  .our-people__carousel {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      justify-items: center;
+      align-items: center;
+  }
+}
