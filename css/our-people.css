@@ -96,26 +96,26 @@
 }
 @media (min-width: 320px) {
   .about-us__carousel {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
-@media(min-width:768px) {
+@media (min-width: 768px) {
   .our-people__carousel {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      justify-items: center;
-      align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
   }
 }
-@media(min-width:991px) {
+@media (min-width: 991px) {
   .our-people__carousel {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 30px;
-      justify-items: center;
-      align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
   }
 }
