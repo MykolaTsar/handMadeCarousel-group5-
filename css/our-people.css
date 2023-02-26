@@ -12,12 +12,10 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  /* min-height: 152px; */
 }
 .our-people__carousel-wrapper {
   display: grid;
   align-items: center;
-  /* min-height: 300px; */
   padding: 0 20px;
   align-content: baseline;
 }
@@ -27,7 +25,6 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  /* height: 0; */
   padding-bottom: 100%;
 }
 .our__people__carousel-picture-img {
@@ -61,12 +58,32 @@
   padding: 20px 0;
   width: 242px;
 }
-.our-people__corousel-text-block::after {
-  content: "+";
-  font-size: 37px;
-  font-weight: 300;
+.plus {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  left: 51%;
+  top: -2px;
+}
+.plus::before,
+.plus::after {
+  content: "";
   position: absolute;
-  right: 1px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: black;
+  transition: height 0.2s ease-in-out;
+}
+.plus::before {
+  transform: rotate(90deg);
+}
+.plus::after {
+  transform: rotate(0deg);
+}
+.plus.active::before {
+  display: none;
 }
 .our-people__carousel {
   display: grid;
